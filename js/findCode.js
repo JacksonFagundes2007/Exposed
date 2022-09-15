@@ -5,7 +5,7 @@ let button = document.querySelector('#confirm')
     try {
         let code = input.value
 
-        window.location.href = `/pages/peoples/${code}.html`
+        window.location.href = `../pages/peoples/${code}.html`
     } catch (err) {
         alert("Invalid Code")
     }
