@@ -1,11 +1,16 @@
 let input = document.querySelector('#key')
+let fail = document.querySelector('#fail')
 
 let button = document.querySelector('#confirm')
 .addEventListener('click', () => {
     if (input.value == "schirigatti") {
         localStorage.setItem("acess", true);
     } else {
-        console.log("Invalid Password");
+        fail.innerHTML = "Incorrect password!"
+        setTimeout(() => {
+            fail.innerHTML = "Try again!"
+        }, 3000);
+
     }
 })
 
